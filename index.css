@@ -137,11 +137,13 @@ p{
   color: aliceblue;
 }
 .imgropa1,
-.imgropa2,
-.imgropa3 {
-  width: 30%; /* Ajusta el ancho de cada imagen según tus necesidades */
-  box-sizing: border-box; /* Incluye el padding y el borde en el ancho */
-}
+  .imgropa2,
+  .imgropa3 {
+    width: 30%;
+    box-sizing: border-box;
+    overflow: hidden; /* Para evitar que el borde agregue scroll horizontal */
+    transition: transform 0.3s; /* Agregamos una transición para suavizar el cambio de tamaño */
+  }
 
 .imgropa1 img,
 .imgropa2 img,
@@ -149,6 +151,11 @@ p{
   width: 100%;
   height: auto;
   display: block;
+}
+.imgropa1:hover,
+.imgropa2:hover,
+.imgropa3:hover {
+  transform: scale(1.1); /* Hacemos que se agranden al pasar el ratón */
 }
 @keyframes glowing {
   0% {
