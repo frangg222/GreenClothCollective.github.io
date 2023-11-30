@@ -132,7 +132,10 @@ animation: glowing 2s infinite;
   justify-content: space-between; /* Las imágenes se colocarán con espacio entre ellas */
   flex-wrap: wrap; /* Si hay espacio insuficiente, las imágenes pasarán a la siguiente línea */
 }
-
+p{
+  font-family:'Bebas Neue', cursive; 
+  color: aliceblue;
+}
 .imgropa1,
 .imgropa2,
 .imgropa3 {
