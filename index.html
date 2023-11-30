@@ -45,30 +45,7 @@
   </div>
 </div>
 
-<script>
-  // Código Konami: Arriba, arriba, abajo, abajo, izquierda, derecha, izquierda, derecha, B, A
-  const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
-  let konamiCodePosition = 0;
 
-  document.addEventListener('keydown', function (e) {
-      // Verificar si la tecla presionada coincide con la siguiente tecla del código Konami
-      if (e.code === konamiCode[konamiCodePosition]) {
-          konamiCodePosition++;
-
-          // Verificar si se ingresó correctamente todo el código
-          if (konamiCodePosition === konamiCode.length) {
-              redirectToYouTube();
-              konamiCodePosition = 0; // Reiniciar posición del código
-          }
-      } else {
-          konamiCodePosition = 0; // Reiniciar posición del código si la tecla es incorrecta
-      }
-  });
-
-  function redirectToYouTube() {
-      window.location.href = 'https://frangg222.github.io/GreenClothCollective.github.io/fent.html'; // Cambia esto por el enlace de YouTube que desees
-  }
-</script>
 <script>
     let menuBtn = document.querySelector('.menu-btn');
     let menu = document.querySelector('.nav');
