@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src='main.js'></script>
+</head>
+<body id="body">
+    <header id="header" >
+        <div class="menu-btn">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div class="header__nav">
+            <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__list_item"><a class="nav__link" href="camisas.html">Camisas</a></li>
+              <li class="nav__list_item"><a class="nav__link" href="accesorios.html">Accesorios</a></li>
+              <li class="nav__list_item"><a class="nav__link" href="ropatemporada.html">Ropa de temporada</a></li>
+              <li class="nav__list_item"><a class="nav__link" href="index.html">Inicio</a></li>
+            </ul>
+            </nav>
+        </div>
+            <img id="letter" src="GreenclothCollectiveLettering.png" alt="LogoLetras" width="350" height="70" >
+       
+    </header>
+
+    <script>
+        let menuBtn = document.querySelector('.menu-btn');
+        let menu = document.querySelector('.nav');
+        let menuItem = document.querySelectorAll('.nav__link');
+      
+        menuBtn.addEventListener('click', function(){
+          menuBtn.classList.toggle('active');
+          menu.classList.toggle('active');
+        })
+      
+        menuItem.forEach(function(menuItem) {
+          menuItem.addEventListener('click', function(){
+            menuBtn.classList.toggle('active');
+            menu.classList.toggle('active');
+          })
+        })
+      
+        const navLinks = document.querySelectorAll('.nav__link');
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            link.removeAttribute('visited');
+          });
+        });
+      </script>
+</body>
+</html>

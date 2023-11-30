@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+
+<body id="body">
+    <header id="header" >
+        <div class="menu-btn">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div class="header__nav">
+            <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__list_item"><a class="nav__link" href="camisas.html">Camisas</a></li>
+              <li class="nav__list_item"><a class="nav__link" href="pantalones.html">Pantalones</a></li>
+              <li class="nav__list_item"><a class="nav__link" href="accesorios.html">Acesorios</a></li>
+              <li class="nav__list_item"><a class="nav__link" href="ropatemporada.html">Ropa de temporada</a></li>
+            </ul>
+            </nav>
+        </div>
+            <img id="letter" src="GreenclothCollectiveLettering.png" alt="LogoLetras" width="350" height="70" >
+       
+    </header>
+<h1 class="h1titl">Cual es nuestro objetivo</h1>
+
+<img class="earth" src="earth.png" alt="planta tierra con sibolo de reciclaje">
+<div class="container">
+  <div class="text-container">
+    <p1 class="p1obje">
+     
+      Nuestro objetivo es crear moda la cual sea sostenible y eco-friendly, ya que como sabrás nuestro planeta está cada vez peor.
+      Con nuestra cooperativa buscamos que todo el mundo se mentalice sobre el daño que se causa al planeta año tras año, aparte
+      de ropa también ofrecemos cursos para concienciar a la gente sobre el medio ambiente y como mejorar el cuidado de la tierra y
+      reducir la huella de carbono
+   
+    </p1>
+  </div>
+</div>
+<script>
+    let menuBtn = document.querySelector('.menu-btn');
+    let menu = document.querySelector('.nav');
+    let menuItem = document.querySelectorAll('.nav__link');
+  
+    menuBtn.addEventListener('click', function(){
+      menuBtn.classList.toggle('active');
+      menu.classList.toggle('active');
+    })
+  
+    menuItem.forEach(function(menuItem) {
+      menuItem.addEventListener('click', function(){
+        menuBtn.classList.toggle('active');
+        menu.classList.toggle('active');
+      })
+    })
+  
+    const navLinks = document.querySelectorAll('.nav__link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        link.removeAttribute('visited');
+      });
+    });
+  </script>
+</body>
+</html>
