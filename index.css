@@ -144,7 +144,11 @@ p{
     overflow: hidden; /* Para evitar que el borde agregue scroll horizontal */
     transition: transform 0.3s; /* Agregamos una transición para suavizar el cambio de tamaño */
   }
-
+  .imgropa1:hover,
+  .imgropa2:hover,
+  .imgropa3:hover {
+    transform: scale(1.1); 
+  }
 .imgropa1 img,
 .imgropa2 img,
 .imgropa3 img {
@@ -152,11 +156,7 @@ p{
   height: auto;
   display: block;
 }
-.imgropa1:hover,
-.imgropa2:hover,
-.imgropa3:hover {
-  transform: scale(1.1); /* Hacemos que se agranden al pasar el ratón */
-}
+
 @keyframes glowing {
   0% {
     text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
