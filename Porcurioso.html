@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <video width="640" height="360" controls autoplay loop  muted  >
+        <source src="Rick Roll (Different link + no ads) (360p).mp4" type="video/mp4">
+        tu navegador no puede cargar este elemento
+    </video>
+    <script>
+        // Obtener el elemento de video
+        const miVideo = document.getElementById('miVideo');
+
+        // Reproducir el video después de un clic en cualquier parte de la página
+        document.addEventListener('click', function() {
+            miVideo.play().catch(function() {
+                // Manejar errores, si los hay
+            });
+        });
+    </script>
+</body>
+</html>
